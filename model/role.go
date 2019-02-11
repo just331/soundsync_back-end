@@ -3,7 +3,7 @@ package model
 import "github.com/go-bongo/bongo"
 
 // Role is the privileges users are given.
-type Role struct {
+type Roles struct {
 	bongo.DocumentBase `bson:",inline"`
 	Spotify
 	Party
@@ -17,7 +17,7 @@ type Spotify struct {
 	shuffle bool // shuffle the playlist
 	repeat  bool // repeat a song
 	loopQ   bool // loop the entire playlist
-	play    bool //	queue a song
+	queue   bool //	queue a song
 }
 
 // Party privileges for users.
@@ -27,5 +27,3 @@ type Party struct {
 	invite bool // invite a user
 	ban    bool // ban a user from instance
 }
-
-// What about user queueing song?
