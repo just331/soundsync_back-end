@@ -17,6 +17,7 @@ type Spotify struct {
 	shuffle bool // shuffle the playlist
 	repeat  bool // repeat a song
 	loopQ   bool // loop the entire playlist
+	play    bool //	queue a song
 }
 
 // Party privileges for users.
